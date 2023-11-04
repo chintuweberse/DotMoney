@@ -1,0 +1,75 @@
+
+.form1{
+    margin: 20px;
+    
+    margin-top: 40px;
+
+}
+
+.img-sign{
+    width: 100%;
+   
+}
+  /* Style the form container */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  form h1{
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  /* Style form labels and inputs */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+ 
+  select,
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  /* Style the submit button */
+  .text-center button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px ;
+    
+    border: none;
+    justify-content: center;
+   text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+  .text-center button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  @media (min-width: 768px){
+    
+              
+           
+        }
+
+  

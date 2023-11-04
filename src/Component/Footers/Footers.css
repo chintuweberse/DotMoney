@@ -1,0 +1,9 @@
+.footer{
+    width: 100%;
+    
+    background-color: black;
+    color: white;
+}
+.footer-item{
+    margin-top: 40px;
+}
