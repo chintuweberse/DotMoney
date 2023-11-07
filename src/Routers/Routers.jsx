@@ -5,9 +5,11 @@ import About  from './../Mainpages/About';
 import Contact from './../Mainpages/Contact';
 import Login from './../Mainpages/Login';
 
-import Sign from '../Mainpages/Sigin';
+import Sign from "../Mainpages/signIn/Sigin";
 import Addvoucher from './../Mainpages/Addvouchaer';
 import Demologin from '../Mainpages/Demologin';
+import Test from '../Mainpages/Test';
+import GetUser from "../Mainpages/admin/Getusers"
 
 
 
@@ -24,6 +26,8 @@ const Routers = () => {
       <Route path='/voucher' element={<Addvoucher/>} />
       
       <Route path='/demo' element={<Demologin/>}/> 
+      <Route path='/test' element={<Test/>}/> 
+      <Route path="/users" element={<GetUser/>} />
 
     </Routes>
     

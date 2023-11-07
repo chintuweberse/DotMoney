@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Card1.module.css';
-import vidofone from './../../assets/images/vodafone.png';
+import vidofone from './../../assets/images/vodaidea.png';
 
 const Card1 = () => {
     return (

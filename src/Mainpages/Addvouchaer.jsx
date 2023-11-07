@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './addvoucher.css';
 import form1 from './../assets/images/images.png';
-import {ToastContainer, toast} from 'react-toastify';
+import toast, {Toaster} from "react-hot-toast";
+
 
 const Addvoucher = () => {
     const [formData, setFormData] = useState({
@@ -48,8 +49,17 @@ const Addvoucher = () => {
         })
             .then((response) => {
                 if (response.ok) {
-                    console.log( "success", response)
-                
+                    console.log("success", response)
+                    setFormData({
+                        Title: '',
+                        Provider: 'Airtel',
+                        Amount: '',
+                        Description: '',
+                    });
+                    showToast() ;
+
+                   
+
                     // Plan added successfully, you can handle the response here
                 } else {
                     // Handle errors or display an error message
@@ -60,17 +70,21 @@ const Addvoucher = () => {
             });
     };
 
-
+    const showToast = () => {
+        toast("Plan added succesfully ");
+      };
 
     return (
         <>
-      
+        <div><Toaster/></div>
+
             <section>
+             
                 <div className="container">
                     <div className="row">
                         <div className=" col-xl-6 col-lg-6 col-sm-12 col-md-12 mx-auto form1">
                             <div className='row justify-content-center'>
-                       
+
 
                                 <form onSubmit={handleSubmit}>
                                     <div> <h1> Add Voucher</h1> </div>
@@ -89,17 +103,17 @@ const Addvoucher = () => {
                                     <label>
                                         Provider:
                                         <select name="Provider" value={formData.Provider} onChange={handleInputChange}>
-                                        <option value="Vodafone">Vodafone-Idea</option>
-                                                <option value="Airtel">Airtel</option>
-                                                <option value="Bsnl">Bsnl</option>
-                                                <option value="Jio">Jio</option>
-                                                <option value="DishTv">DishTv</option>
-                                                <option value="TataSky">TataSky</option>
-                                                <option value="VideconApp">VideconApp</option>
-                                                <option value="SunDirect">SunDirect</option>
-                                                <option value="JioPosLite">JioPosLite</option>
-                                                <option value="DishTv">DishTv</option>
-                                                <option value="D2H">D2H Pay</option>
+                                            <option value="Vodafone">Vodafone-Idea</option>
+                                            <option value="Airtel">Airtel</option>
+                                            <option value="Bsnl">Bsnl</option>
+                                            <option value="Jio">Jio</option>
+                                            <option value="DishTv">DishTv</option>
+                                            <option value="TataSky">TataSky</option>
+                                            <option value="VideconApp">VideconApp</option>
+                                            <option value="SunDirect">SunDirect</option>
+                                            <option value="JioPosLite">JioPosLite</option>
+                                            <option value="DishTv">DishTv</option>
+                                            <option value="D2H">D2H Pay</option>
                                         </select>
                                     </label>
 
@@ -126,16 +140,20 @@ const Addvoucher = () => {
                                     </label>
 
                                     <div className="text-center">
-                                        <button type="submit" className="btn btn-primary">Submit</button>
-                                    </div> 
+                                    <button class="button" type="submit" role="button">Submit</button>
+                                        {/* <button type="submit" className="btn btn-primary">Submit</button> */}
+                                    </div>
                                 </form>
                                
+                                <button onClick={showToast}>Click me to show a toast</button>
 
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
+
         </>
     );
 };

@@ -1,0 +1,28 @@
+.wrapper{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.card{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.table_header th{
+    padding: 10px;
+}
+
+.table_row{
+    
+}
+
+.table_row td{
+    padding: 10px;
+}
